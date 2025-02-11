@@ -7,7 +7,7 @@ export const Login = () => {
     email: "",
     password: "",
   });
-  const [showPassword, setShwoPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(true);
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -46,7 +46,7 @@ export const Login = () => {
           />
           <input
             type="checkbox"
-            onClick={() => setShwoPassword((showPassword) => !showPassword)}
+            onClick={() => setShowPassword((showPassword) => !showPassword)}
             style={{ alignSelf: "end", accentColor: "black" }}
           />
           <button
@@ -54,7 +54,6 @@ export const Login = () => {
             style={{
               background: "#000000",
               color: "#ffffff",
-              outline: "none",
               border: 0,
               padding: "10px",
             }}
