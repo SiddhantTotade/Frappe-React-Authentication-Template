@@ -25,6 +25,16 @@ export const Register = () => {
           onSubmit={() => (userDetails.email, userDetails.password)}
         >
           <input
+            name="name"
+            placeholder="Name"
+            type="text"
+            pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+            value={userDetails.name}
+            required
+            onChange={handleChange}
+            style={{ padding: "10px", outline: "none" }}
+          />
+          <input
             name="email"
             placeholder="Email"
             type="email"
@@ -58,7 +68,7 @@ export const Register = () => {
               padding: "10px",
             }}
           >
-            Login
+            Register
           </button>
         </form>
       </div>
